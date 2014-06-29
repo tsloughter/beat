@@ -10,10 +10,10 @@ deps:
 compile: deps
 	@$(REBAR) compile
 
-release: clean
+release: clean compile
 	@$(RELX) release tar
 
-relup: clean
+relup: clean compile
 	@$(RELX) release relup tar
 
 repl:

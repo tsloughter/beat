@@ -19,7 +19,7 @@ cp _rel/beat/beat-0.1.0.tar.gz /tmp
 cp _rel/beat/beat-0.1.1.tar.gz /tmp/beat-0.1.1.tar.gz
 
 cd /tmp/beat
-tar xf /tmp/beat-0.1.0.tar.gz
+tar -zxf /tmp/beat-0.1.0.tar.gz
 
 echo "STARTING NODE"
 ./bin/beat-0.1.0 start

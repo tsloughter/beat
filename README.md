@@ -9,16 +9,13 @@ day, from a basic skeleton.
 
 ## Quick Start
 
-To run `beat` ensure that you have [`relx`](https://github.com/erlware/relx)
+To run `beat` ensure that you have [`rebar3`](https://github.com/rebar/rebar3)
 installed on your system and do the following:
 
 ```
-> make && relx
-...
-> _rel/bin/beat console
+> sh v1to2.sh
 ```
 Now connect to localhost port 27182 and enjoy the sweet flow of integers.
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/blt/beat/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-

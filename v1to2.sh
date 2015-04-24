@@ -6,17 +6,17 @@ STARTDIR=`pwd`
 
 /tmp/beat/bin/beat-0.1.0 stop || echo "No previous node running."
 rm -rf /tmp/beat
-rm -rf _rel
 
 git checkout v1
-make release
+rebar3 tar
 
 git checkout v2
-make relup
+rebar3 release relup
+rebar3 tar
 
 mkdir -p /tmp/beat
-cp _rel/beat/beat-0.1.0.tar.gz /tmp
-cp _rel/beat/beat-0.1.1.tar.gz /tmp/beat-0.1.1.tar.gz
+cp _build/default/rel/beat/beat-0.1.0.tar.gz /tmp
+cp _build/default/rel/beat/beat-0.1.1.tar.gz /tmp/beat-0.1.1.tar.gz
 
 cd /tmp/beat
 tar -zxf /tmp/beat-0.1.0.tar.gz
